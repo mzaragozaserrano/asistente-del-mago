@@ -5,6 +5,10 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class Converters {
+    private companion object {
+        val gson: Gson = Gson()
+    }
+
     @TypeConverter
     fun fromJsonList(value: String): List<String> {
         return if (value.isEmpty() || value == "[]") {
@@ -12,7 +16,7 @@ class Converters {
         } else {
             try {
                 val listType = object : TypeToken<List<String>>() {}.type
-                Gson().fromJson(value, listType)
+                gson.fromJson<List<String>>(value, listType)
             } catch (e: Exception) {
                 emptyList()
             }
@@ -24,7 +28,7 @@ class Converters {
         return if (list.isEmpty()) {
             "[]"
         } else {
-            Gson().toJson(list)
+            gson.toJson(list)
         }
     }
 }
