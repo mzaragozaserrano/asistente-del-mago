@@ -5,7 +5,7 @@ import com.asistentedelmago.core.domain.usecase.CreateTrickUseCase
 import com.asistentedelmago.core.domain.usecase.GetAllTricksUseCase
 import com.asistentedelmago.feature.repertory.ui.AddTrickViewModel
 import com.asistentedelmago.feature.repertory.ui.ArsenalViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.androidx.compose.viewModel
 import org.koin.dsl.module
 
 val repertoryModule = module {
