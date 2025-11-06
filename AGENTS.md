@@ -20,7 +20,7 @@
 - **Arquitectura**: MVVM (Model-View-ViewModel)
 - **UI Framework**: Jetpack Compose
 - **Red**: Retrofit (con corutinas de Kotlin)
-- **Inyección de Dependencias**: Hilt
+- **Inyección de Dependencias**: Koin
 - **Módulos**: Arquitectura modular por features (`:app`, `:core:model`, `:core:data`, `:core:domain`, `:feature:repertory`, `:feature:search`, `:feature:voice`, `:feature:premium`)
 
 ### APIs Externas
