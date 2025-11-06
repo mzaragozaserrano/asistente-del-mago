@@ -1,8 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
-    id("kotlin-kapt")
 }
 
 android {
@@ -71,10 +69,9 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.8.1")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     
-    // Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    // Koin
+    implementation("io.insert-koin:koin-android:3.5.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.0")
     
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")

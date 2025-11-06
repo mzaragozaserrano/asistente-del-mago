@@ -12,13 +12,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.asistentedelmago.core.model.MagicTrick
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ArsenalScreen(
-    viewModel: ArsenalViewModel = hiltViewModel(),
+    viewModel: ArsenalViewModel = koinViewModel(),
     onNavigateToAddTrick: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()

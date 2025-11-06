@@ -4,20 +4,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.asistentedelmago.core.domain.usecase.GetAllTricksUseCase
 import com.asistentedelmago.core.model.MagicTrick
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 data class ArsenalUiState(
     val tricks: List<MagicTrick> = emptyList(),
     val isLoading: Boolean = false
 )
 
-@HiltViewModel
-class ArsenalViewModel @Inject constructor(
+class ArsenalViewModel(
     private val getAllTricksUseCase: GetAllTricksUseCase
 ) : ViewModel() {
     

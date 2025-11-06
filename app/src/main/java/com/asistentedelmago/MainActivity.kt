@@ -13,9 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import com.asistentedelmago.feature.repertory.ui.AddTrickScreen
 import com.asistentedelmago.feature.repertory.ui.ArsenalScreen
 import com.asistentedelmago.ui.theme.AsistenteDelMagoTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,32 +5,20 @@ import com.asistentedelmago.core.data.local.AppDatabase
 import com.asistentedelmago.core.data.local.TrickDao
 import com.asistentedelmago.core.data.repository.TricksRepositoryImpl
 import com.asistentedelmago.core.domain.repository.TricksRepository
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import org.koin.android.ext.koin.androidContext
+import org.koin.dsl.module
 
-@Module
-@InstallIn(SingletonComponent::class)
-object DataModule {
-    
-    @Provides
-    @Singleton
-    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
-        return AppDatabase.create(context)
+val dataModule = module {
+    single<AppDatabase> {
+        AppDatabase.create(androidContext())
     }
     
-    @Provides
-    fun provideTrickDao(database: AppDatabase): TrickDao {
-        return database.trickDao()
+    single<TrickDao> {
+        get<AppDatabase>().trickDao()
     }
     
-    @Provides
-    @Singleton
-    fun provideTricksRepository(repository: TricksRepositoryImpl): TricksRepository {
-        return repository
+    single<TricksRepository> {
+        TricksRepositoryImpl(get())
     }
 }
 

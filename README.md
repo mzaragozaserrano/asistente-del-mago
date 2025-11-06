@@ -7,7 +7,7 @@ Aplicación Android para magos que permite gestionar su repertorio de trucos, bu
 - **Arquitectura**: MVVM (Model-View-ViewModel)
 - **UI**: Jetpack Compose
 - **Base de Datos Local**: Room
-- **Inyección de Dependencias**: Hilt
+- **Inyección de Dependencias**: Koin
 - **Lenguaje**: Kotlin
 
 ## Estructura del Proyecto

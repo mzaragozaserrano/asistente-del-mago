@@ -6,9 +6,8 @@ import com.asistentedelmago.core.domain.repository.TricksRepository
 import com.asistentedelmago.core.model.MagicTrick
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 
-class TricksRepositoryImpl @Inject constructor(
+class TricksRepositoryImpl(
     private val trickDao: TrickDao
 ) : TricksRepository {
     

@@ -3,9 +3,8 @@ package com.asistentedelmago.core.domain.usecase
 import com.asistentedelmago.core.domain.repository.TricksRepository
 import com.asistentedelmago.core.model.MagicTrick
 import java.util.UUID
-import javax.inject.Inject
 
-class CreateTrickUseCase @Inject constructor(
+class CreateTrickUseCase(
     private val repository: TricksRepository
 ) {
     suspend operator fun invoke(
