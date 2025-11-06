@@ -50,19 +50,6 @@ captures/
 !.idea/vcs.xml
 !.idea/encodings.xml
 
-# Android Studio generated files
-*.iml
-.gradle/
-local.properties
-/.idea/caches/
-/.idea/libraries/
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-*.log
-
 # Keystore files
 *.jks
 *.keystore
