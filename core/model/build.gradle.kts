@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.asistentedelmago.core.model"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24

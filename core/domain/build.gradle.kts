@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.asistentedelmago.core.domain"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -25,9 +25,9 @@ dependencies {
     implementation(project(":core:model"))
     
     // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     
     // Koin (para inyección en UseCases si es necesario)
-    implementation("io.insert-koin:koin-core:3.5.0")
+    implementation("io.insert-koin:koin-core:3.5.6")
 }
 
