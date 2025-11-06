@@ -4,11 +4,10 @@ import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class Converters {
-    private companion object {
-        val gson: Gson = Gson()
-    }
+object Converters {
+    private val gson: Gson = Gson()
 
+    @JvmStatic
     @TypeConverter
     fun fromJsonList(value: String): List<String> {
         return if (value.isEmpty() || value == "[]") {
@@ -23,6 +22,7 @@ class Converters {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toJsonList(list: List<String>): String {
         return if (list.isEmpty()) {
