@@ -72,7 +72,6 @@ dependencies {
     // Koin
     implementation("io.insert-koin:koin-android:3.5.0")
     implementation("io.insert-koin:koin-androidx-compose:3.5.0")
-    implementation("io.insert-koin:koin-androidx-viewmodel:3.5.0")
     
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")
